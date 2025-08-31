@@ -54,9 +54,9 @@ final_report.columns = [
 # save to new CSV
 final_report.to_csv("inventory_decrease_report.csv", index=False)
 
-print(f"✅ Saved inventory_decrease_report.csv")
-print(f"📉 Found {len(final_report)} items with decreased inventory")
-print(f"📊 Total decrease: {final_report['Decrease Amount'].sum()} units")
+print(f"Saved inventory_decrease_report.csv")
+print(f"Found {len(final_report)} items with decreased inventory")
+print(f"Total decrease: {final_report['Decrease Amount'].sum()} units")
 
 # show top 10 biggest decreases
 print(f"\n🔝 Top 10 biggest decreases:")
