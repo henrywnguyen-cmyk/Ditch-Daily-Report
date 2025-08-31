@@ -71,7 +71,7 @@ def get_inventory_levels(inventory_items):
     
     for i in range(0, len(item_ids), batch_size):
         batch = item_ids[i:i+batch_size]
-        print(f"📊 Fetching inventory levels batch {i//batch_size + 1}...")
+        print(f"Fetching inventory levels batch {i//batch_size + 1}...")
         
         url = f"{SHOP_URL}/admin/api/{API_VERSION}/inventory_levels.json"
         params = {
@@ -155,9 +155,9 @@ if __name__ == "__main__":
 
         save_inventory_report(matched_inventory, inventory_filename)
         
-        print(f"\n✅ Inventory sync complete!")
-        print(f"📁 Report saved as: {inventory_filename}")
-        print(f"📊 Data sorted: Highest stock → Lowest stock")
+        print(f"Inventory sync complete!")
+        print(f"Report saved as: {inventory_filename}")
+        print(f"Data sorted: Highest stock → Lowest stock")
         
     except Exception as e:
-        print(f"❌ Error during sync: {e}")
+        print(f"Error during sync: {e}")
